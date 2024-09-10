@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet"
+  />
+
+
+
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <title>Convert teste planejamento </title>
+</head>
+<body>
+<img src="./img/logo.svg" alt="Convert logo" />
+
+
+<h1 style="color: darkblue">Conversor de Brl para Outras Moedas...</h1>
+
+<main>
+
+  <form onsubmit="converterValor(event)">
+    <label for="amount">Valor</label>
+    <input type="text" name="amount" id="amount" placeholder="R$ 0,00" required>
+
+    <label for="currency">Moeda</label>
+    <select name="currency" id="currency" required>
+      <option value="" disabled selected hidden>Selecione a moeda</option>
+      <option value="USD" data-open="5.60" data-last="5.59">Dólar Americano</option>
+      <option value="EUR" data-open="6.21" data-last="6.16">Euro</option>
+      <option value="GBP" data-open="7.35" data-last="7.30">Libra Esterlina</option>
+    </select>
+
+    <button type="submit">Converter em reais</button>
+  </form>
+
+  <forms class="Resultado">
+    <span id="description"></span>
+    <h1 id="result"></h1>
+  </forms>
+
+</main>
+</body>
+<script src="js/script.js"></script>
+</html>
+
